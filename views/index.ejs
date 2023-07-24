@@ -1,0 +1,17 @@
+<%- include("layout/header.ejs") %>
+  <main>
+    <form action="/" method="post"">
+      <input type="text" name="programLang" placeholder="Programming Language">
+      <button type="submit">Add</button>
+    </form>
+    <ul>
+      <% if(programLangs.length > 0) { %>
+        <% for(var i = 0; i < programLangs.length; i++) { %>
+          <li><%= i + 1+". " + programLangs[i] %></li>
+        <% } %>
+      <% } else { %>
+        <li>No data found</li>
+      <% } %>
+    </ul>
+  </main>
+ <%- include("layout/footer.ejs") %>
